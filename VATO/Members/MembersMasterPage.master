@@ -1,0 +1,169 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MembersMasterPage.master.cs"
+    Inherits="Members_MembersMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Back To My Village--Members</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .body
+        {
+            background-color: #003000;
+        }
+        .table
+        {
+            background-color: #089663;
+        }
+        .tableData
+        {
+            width: 90px;
+            background-color: #089663;
+            font-weight: bold;
+            font-size: smaller;
+            height: 20px;
+            color: White;
+        }
+        .style4
+        {
+            font-size: xx-small;
+            font-weight: bold;
+            color: #FFFFFF;
+        }
+        .style5
+        {
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="body">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <center>
+        <div style="height: 100%; width: 90%;">
+            <table width="90%" class="table" border="0" cellpadding="0" cellspacing="0">
+                <tr style="background-color: #003000">
+                    <td width="100%" align="left" valign="baseline">
+                        <center>
+                            <asp:Image ID="imgHeader" runat="server" ImageUrl="~/Images/vil.jpg"
+                                Height="150px" Width="100%" />
+                        </center>
+                    </td>
+                </tr>
+                <tr class="table" style="background-color: #003000">
+                    <td style="color: White; font-size: x-small; font-weight: bold">
+                        <table width="100%">
+                            <%--<tr>
+                                <td>
+                                    <marquee direction="RIGHT" behavior="ALTERNATE">Back To My Village</marquee>
+                                </td>
+                                <td>
+                                    <marquee direction="LEFT" behavior="ALTERNATE">Back To My Village</marquee>
+                                </td>
+                            </tr>--%>
+                        </table>
+                    </td>
+                </tr>
+                <tr valign="baseline" style="background-color: #003000">
+                    <td valign="middle">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" 
+                            bgcolor="#003300">
+                            <tr>
+                            <td width="13%" class="style5">Donors</td>
+                                <td width="74%">
+                                    <asp:Menu ID="Menu1" ForeColor="White" Orientation="Horizontal" runat="server" Style="font-weight: 700;
+                                        font-size: small">
+                                        <DynamicMenuItemStyle BackColor="#669999" Font-Bold="True" Font-Size="Small" ForeColor="White" />
+                                        <StaticHoverStyle BackColor="#006500" />
+                                        <Items>
+                                            <asp:MenuItem Text="|||" Value="|||"></asp:MenuItem>
+                                            <asp:MenuItem NavigateUrl="~/Admin/Default.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                                            <asp:MenuItem Text="My Account " Value="Manage Villages ">
+                                                <asp:MenuItem NavigateUrl="~/Members/frmChangePassword.aspx" 
+                                                    Text="Change Password" Value="Change Password"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                                            <asp:MenuItem Text="Donations" Value="Manage Volunteers">
+                                                <asp:MenuItem NavigateUrl="~/Members/frmActivityMonitoringDetails.aspx" 
+                                                    Text="Activity Completion Info" Value="Activity Completion Info">
+                                                </asp:MenuItem>
+                                                <asp:MenuItem NavigateUrl="~/Members/frmVillageDonationDetails.aspx" 
+                                                    Text="Donate Amount" Value="Donate Amount"></asp:MenuItem>
+                                                <asp:MenuItem NavigateUrl="~/Members/frmPaymentTypeDonationDetails.aspx" 
+                                                    Text="Donation Details" Value="Donation Details"></asp:MenuItem>
+                                                <asp:MenuItem NavigateUrl="~/Members/frmMemDonationDetails.aspx" 
+                                                    Text="My Donations" Value="My Donations"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                                            <asp:MenuItem Text="Questionnaires" Value="Questionnaires">
+                                                <asp:MenuItem NavigateUrl="~/Members/frmMemActQuestionRaiseMaster.aspx" 
+                                                    Text="Post A Query" Value="Post A Query"></asp:MenuItem>
+                                                <asp:MenuItem NavigateUrl="~/Members/frmViewAnswersToQuestionsOnActivity.aspx" 
+                                                    Text="Answers For Queries" Value="Answers For Queries"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                                            <asp:MenuItem Text="E-Mails" Value="Admin Activities">
+                                                <asp:MenuItem NavigateUrl="~/Members/frmComposeMail.aspx" Text="Compose Mail" 
+                                                    Value="Compose Mail"></asp:MenuItem>
+                                                <asp:MenuItem NavigateUrl="~/Members/frmInbox.aspx" Text="Inbox Mails" 
+                                                    Value="Inbox Mails"></asp:MenuItem>
+                                                <asp:MenuItem NavigateUrl="~/Members/frmOutBox.aspx" Text="Outbox Mails" 
+                                                    Value="Outbox Mails"></asp:MenuItem>
+                                                <asp:MenuItem Text="Group Caht" Value="Group Caht" 
+                                                    NavigateUrl="~/Members/frmMemberChatRoom.aspx"></asp:MenuItem>
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                                            <asp:MenuItem Text="Forums" Value="Forums" NavigateUrl="~/Members/frmForumDiscussionDetails.aspx">
+                                                
+                                               
+                                            </asp:MenuItem>
+                                            <asp:MenuItem Text="|||" Value="|||"></asp:MenuItem>
+                                            <asp:MenuItem Text="Sign Out" Value="Sign Out" NavigateUrl="~/SignOut.aspx"></asp:MenuItem>
+                                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                                        </Items>
+                                    </asp:Menu>
+                                </td>
+                                 <td width="13%" class="style5"><%=Session["UserName"].ToString().ToUpper() %></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" style="font-weight: 700;
+                            font-size: medium; color: #FFFFFF">
+                            <tr>
+                                <td width="3%" align="center" valign="top">
+                                </td>
+                                <td width="94%" valign="top" align="left" style="background-color: #003300; height: 100%">
+                                    <center>
+                                        <div style="width: 100%; overflow: auto">
+                                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                            </asp:ContentPlaceHolder>
+                                        </div>
+                                    </center>
+                                </td>
+                                <td width="3%" align="center" valign="top">
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <center>
+                            <span class="style4"> Village Development System@2012
+ &copy;Copyrights Reserved .</span>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </center>
+    </form>
+</body>
+</html>

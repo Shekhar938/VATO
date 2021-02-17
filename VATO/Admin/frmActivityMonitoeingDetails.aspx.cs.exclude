@@ -1,0 +1,97 @@
+﻿using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+
+public partial class Admin_frmActivityMonitoeingDetails : System.Web.UI.Page
+{
+    Cls_ActivityMonitorDetails objActivityMonitor = new Cls_ActivityMonitorDetails();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        try
+        {
+            if (!IsPostBack)
+            {
+                GetActivityMonitorId();
+            }
+        }
+        catch (Exception ex)
+        {
+
+            LblError.Text = ex.Message;
+        }
+    }
+    protected void btnAdd_Click(object sender, EventArgs e)
+    {
+        try
+        {
+
+            objActivityMonitor.ActivityMonitorId =Convert.ToInt32(ddlMonitorID.SelectedValue);
+            string s = "~/ActivityImages/" + Session["ActivityImage"].ToString();
+            objActivityMonitor.ActivityImagefileName = s.ToString();
+            objActivityMonitor.ActivityImagefileDescription = TxtImageDescription.Text;
+            string s1 = "~/VideoFiles/" + Session["VideoFile"].ToString();
+            objActivityMonitor.ActivityImageVideofileName = s1;
+            objActivityMonitor.ImageorVideofileHostedVolunteerId = Convert.ToInt32(2500);
+
+
+            int i = objActivityMonitor.InsertActivityMonitoringDetails();
+            if (i > 0)
+            {
+                Cleardata();
+                LblError.Text = "Recorded Inserted";
+            }
+            else
+            {
+                LblError.Text = "Recorded Not Inserted Try Again";
+            }
+
+        }
+        catch (Exception ex)
+        {
+
+            LblError.Text = ex.Message;
+        }
+    }
+    protected void btncancel_Click(object sender, EventArgs e)
+    {
+        Cleardata();
+    }
+    void GetActivityMonitorId()
+    {
+        try
+        {
+            ddlMonitorID.Items.Clear();
+            DataSet ds = objActivityMonitor.GetActivityMonitorId();
+            if (ds.Tables[0].Rows.Count != 0)
+            {
+                ddlMonitorID.DataSource = ds.Tables[0];
+                //ddlvolunteerID.DataTextField = "VolunteerName";
+                ddlMonitorID.DataValueField = "ActivityId";
+                ddlMonitorID.DataBind();
+            }
+            ddlMonitorID.Items.Insert(0, "--Select One--");
+        }
+        catch (Exception ex)
+        {
+
+            LblError.Text = ex.Message;
+        }
+    }
+    void Cleardata()
+    {
+        TxtImageDescription.Text = "";
+       
+        if (ddlMonitorID.Items.Count != 0)
+            ddlMonitorID.SelectedIndex = 0;
+        
+    }
+}

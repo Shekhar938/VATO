@@ -1,0 +1,272 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainMasterPage.master.cs"
+    Inherits="MainMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .body
+        {
+            background-color: #003300;
+        }
+        .table
+        {
+            background-color: #089663;
+        }
+        .tableData
+        {
+            width: 100px;
+            background-color: #003300;
+            font-weight: bold;
+            font-size: smaller;
+            height: 20px;
+            color: White;
+        }
+        .style2
+        {
+            color: White;
+            background:#003300;
+        }
+        .style3
+        {
+            color: #003000;
+            font-size: smaller;
+            background:#003300;
+        }
+        .style4
+        {
+            font-size: xx-small;
+            font-weight: bold;
+            color: #FFFFFF;
+        }
+        .style6
+        {
+            color: Yellow;
+            font-family: Verdana;
+            font-size: medium;
+            background:#003300;
+        }
+        .style7
+        {
+            height: 20px;
+        }
+    </style>
+</head>
+<body class="body">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <center>
+        <div style="height: 100%">
+            <table width="90%" class="table" border="0" cellpadding="0" cellspacing="0">
+                <tr style="background-color: #003000">
+                    <td width="100%" align="left" valign="baseline">
+                        <center>
+                            <asp:Image ID="imgHeader" runat="server" ImageUrl="~/Images/vil.jpg"
+                                Height="150px" Width="100%" />
+                        </center>
+                    </td>
+                </tr>
+                <tr class="table" style="background-color: #003000">
+                    <td style="color: White; font-size: x-small; font-weight: bold">
+                        <%--<table width="100%">
+                            <tr>
+                                <td>
+                                    <marquee direction="RIGHT" behavior="ALTERNATE">Back To My Village</marquee>
+                                </td>
+                                <td>
+                                    <marquee direction="LEFT" behavior="ALTERNATE">Back To My Village</marquee>
+                                </td>
+                            </tr>
+                        </table>--%>
+                    </td>
+                </tr>
+                <tr valign="baseline" style="background-color: #003300">
+                    <td valign="middle">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" 
+                            style="font-size: medium" bgcolor="#003300">
+                            <tr>
+                                                               
+                                <td class="tableData">
+                                    <a href="Default.aspx" ><span class="style6">Home</span></a>
+                                </td>
+                                <td class="tableData">
+                                    <a href="frmAboutus.aspx" ><span class="style6">About Us</span></a>
+                                </td>
+                                <td class="tableData">
+                                    <a href="frmContactUs.aspx" ><span class="style6">Contact Us</span></a>
+                                </td>
+                                
+                                
+                                  
+                                <td class="tableData">
+                                    <a href="Admin/Default.aspx"><span class="style6">Admin Login</span></a>
+                                </td>
+                                <td class="tableData">
+                                    <a href="Members/Default.aspx"><span class="style6">Donor Login</span></a>
+                                </td>
+                                <td class="tableData">
+                                    <a href="Volunteers/Default.aspx"><span class="style6">Volunteer Login</span></a>
+                                </td>
+                                
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" style="font-weight: 700;
+                            font-size: small; color: #FFFFFF">
+                            <tr>
+                                <td width="20%" align="center" valign="top" style="background:#003300">
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <table width="80%" border="1" cellpadding="1" cellspacing="1">
+                                        <tr>
+                                            <td class="style2">
+                                                Activities</td>
+                                                
+                                        </tr>
+                                        <tr>
+                                            <td class="style3">
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <a href="frmActivities.aspx" ><span class="style6">Activity Details</span></a>
+                                                <br />
+                                                <br />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <br />
+                                    <%--<table width="80%" border="1" cellpadding="1" cellspacing="1">
+                                        <tr>
+                                            <td>
+                                                Donors</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="style3">
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <a href="frmMemberRegistration.aspx"><span class="style6">Donor Signup</span></a>
+                                                <br />
+                                                <br />
+                                            </td>
+                                        </tr>
+                                    </table>--%>
+                                    <br />
+                                    <table width="80%" border="1" cellpadding="1" cellspacing="1">
+                                        <%--<tr>
+                                            <td class="style7">
+                                                Volunteers
+                                            </td>
+                                        </tr>--%>
+                                        <tr>
+                                            <%--<td class="style3">
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <br />
+                                            </td>--%>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td width="60%" height="100%" valign="top" align="left" style="background-color: #003300">
+                                    <div>
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                            <p>
+                                                <br />
+                                            </p>
+                                        </asp:ContentPlaceHolder>
+                                    </div>
+                                </td>
+                                <td width="20%" align="center" valign="top" style="background:#003300">
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <table width="80%" border="1" cellpadding="1" cellspacing="1">
+                                    <tr>
+                                            <td style="background:#003300">
+                                                Donors</td>
+                                        </tr>
+                                    <td class="style3">
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <a href="frmMemberRegistration.aspx"><span class="style6">Donor Signup</span></a>
+                                                <br />
+                                                <br />
+                                            </td>
+                                        <%--<tr>
+                                            <td>
+                                                Adds By Google
+                                            </td>
+                                        </tr>--%>
+                                        <%--<tr>
+                                            <td class="style3">
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <br />
+                                            </td>
+                                        </tr>--%>
+                                    </table>
+                                    <br />
+                                    <%--<table width="80%" border="1" cellpadding="1" cellspacing="1">
+                                        <tr>
+                                            <td>
+                                                Adds By Google
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="style3">
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <br />
+                                            </td>
+                                        </tr>
+                                    </table>--%>
+                                    <br />
+                                    <table width="80%" border="1" cellpadding="1" cellspacing="1">
+                                        <tr>
+                                            <%--<td>
+                                                Adds By Google
+                                            </td>--%>
+                                        </tr>
+                                        <tr>
+                                            <%--<td class="style3">
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <br />
+                                                <br />
+                                            </td>--%>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background:#003300">
+                        <center>
+                            <span class="style4">village Development system@2012 &copy;Copyrights Reserved </span>&nbsp;</center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </center>
+    </form>
+</body>
+</html>

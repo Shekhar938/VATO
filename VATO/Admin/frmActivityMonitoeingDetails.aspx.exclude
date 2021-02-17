@@ -1,0 +1,108 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/Admin/AdminMasterPage.master" AutoEventWireup="true" CodeFile="frmActivityMonitoeingDetails.aspx.cs" Inherits="Admin_frmActivityMonitoeingDetails" Title="Untitled Page" %>
+<%@ Register Src="~/UnormalPagesUserControls/UCActivityMonitoeingDetails.ascx" TagName="FileUpload" TagPrefix="UC1" %>
+<%@ Register Src="~/UnormalPagesUserControls/UCActivityVideofile.ascx" TagName="FileUpload1" TagPrefix="Uc2" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+ <style type="text/css" >
+.tableData
+{
+	text-align:left;
+	vertical-align:bottom;
+	font-weight:bold;
+	font-family:Verdana;
+	font-size:9px;
+	}
+.tableHeading
+{
+	text-align:center;
+	vertical-align:bottom;
+	font-weight:bold;
+	font-family:Verdana;
+	font-size:16px;
+	
+	}
+
+
+
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<center>
+<table class="tableData">
+<tr>
+        <td colspan="3" class="tableHeading">Activity Monitoeing Details Data</td>
+        
+        </tr>
+         <tr>
+        <td colspan="3" class="tableHeading">&nbsp;</td>
+        
+        </tr>
+         <tr>
+        <td colspan="3" class="tableHeading">&nbsp;</td>
+        
+        </tr>
+          <tr>
+             <td>
+        Activity Monitor ID
+             </td>
+        <td>
+        <asp:DropDownList ID="ddlMonitorID" runat="server" AutoPostBack="True" 
+                ></asp:DropDownList>
+        </td>
+   
+        </tr>
+          <tr>
+             <td>
+        Activity Image File
+             </td>
+        <td>
+       <UC1:FileUpload ID="ImageFile1" runat="server" />
+        </td>
+   
+        </tr>
+        <tr>
+        <td>
+        
+        Activity Image File Description
+        </td>
+        <td>
+        <asp:TextBox ID="TxtImageDescription" runat="server" TextMode="MultiLine" 
+                Height="153px" Width="375px"></asp:TextBox>
+        </td>
+        
+        </tr>
+        <tr>
+        <td>
+        Activity Image Video File
+        </td>
+        <td>
+        <Uc2:FileUpload1 ID="Videofile" runat="server" />
+        </td>
+        </tr>
+        <tr>
+        <td colspan="3" class="tableHeading">&nbsp;</td>
+        
+        </tr>
+             <tr>
+        <td colspan="3" class="tableHeading">
+        
+        </td>
+        
+        </tr>
+        <tr>
+        <td colspan="3">
+        
+        <center>
+        <asp:Button ID="btnAdd" runat="server" Text="Submit" style="font-weight: 700" 
+                onclick="btnAdd_Click" />
+     
+        
+               <asp:Button ID="btncancel" runat="server" Text="Cancel" 
+                style="font-weight: 700" onclick="btncancel_Click" /></center>
+        </td>
+        </tr>
+</table>
+<br />
+<asp:Label ID="LblError" runat="server"></asp:Label>
+</center>
+</asp:Content>
+

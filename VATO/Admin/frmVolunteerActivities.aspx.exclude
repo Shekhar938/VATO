@@ -1,0 +1,130 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/Admin/AdminMasterPage.master" AutoEventWireup="true"
+    CodeFile="frmVolunteerActivities.aspx.cs" Inherits="Admin_frmActivityquestionmaster"
+    Title="Untitled Page" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <style type="text/css">
+        .tableData
+        {
+            text-align: left;
+            vertical-align: bottom;
+            font-weight: bold;
+            font-family: Verdana;
+            font-size: 9px;
+        }
+        .tableHeading
+        {
+            text-align: center;
+            vertical-align: bottom;
+            font-weight: bold;
+            font-family: Verdana;
+            font-size: 16px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <center>
+        <table class="tableData">
+            <tr>
+                <td colspan="3" class="tableHeading">
+                    Volunteer Activities Data
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="tableHeading">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="tableHeading">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Volunteer Name
+                </td>
+                <td>
+                    <asp:DropDownList ID="ddlvolunteerID" runat="server"  Height="16px">
+                    </asp:DropDownList>
+                </td>
+            </tr>
+            <tr>
+                <td class="tableData">
+                   Activity Conducted Date
+                </td>
+                <td>
+                    <asp:TextBox ID="TxtActivityconduceddate" runat="server"></asp:TextBox>
+                    <cc1:CalendarExtender ID="CalenderExtender1" TargetControlID="TxtActivityconduceddate" runat="server"></cc1:CalendarExtender>
+                </td>
+                <td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="TxtActivityconduceddate"
+                        ErrorMessage="*" runat="server"></asp:RequiredFieldValidator>
+                </td>
+            </tr>
+             <tr>
+                <td>
+                    Village Name
+                </td>
+                <td>
+                    <asp:DropDownList ID="ddlvillageId" runat="server"  Height="16px">
+                    </asp:DropDownList>
+                </td>
+            </tr>
+              <tr>
+                <td>
+                    Case Study Name
+                </td>
+                <td>
+                    <asp:DropDownList ID="ddlCasestudyId" runat="server"  Height="16px">
+                    </asp:DropDownList>
+                </td>
+            </tr>
+            <tr>
+                <td class="tableData">
+                    Case Study Details Description
+                </td>
+                <td>
+                    <asp:TextBox ID="TxtcasestudyDescription" runat="server"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="TxtcasestudyDescription"
+                        ErrorMessage="*" runat="server"></asp:RequiredFieldValidator>
+                </td>
+            </tr>
+             <tr>
+                <td class="tableData">
+                    Case Study Out Come
+                </td>
+                <td>
+                    <asp:TextBox ID="TxtCasestudyOutCome" runat="server"></asp:TextBox>
+                </td>
+                <td>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="TxtCasestudyOutCome"
+                        ErrorMessage="*" runat="server"></asp:RequiredFieldValidator>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="tableHeading">
+                    &nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="tableHeading">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <center>
+                        <asp:Button ID="btnAdd" runat="server" Text="Submit" Style="font-weight: 700" OnClick="btnAdd_Click" />
+                        <asp:Button ID="btncancel" runat="server" Text="Cancel" Style="font-weight: 700"
+                            OnClick="btncancel_Click" /></center>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <asp:Label ID="lblError" runat="server"></asp:Label>
+    </center>
+</asp:Content>

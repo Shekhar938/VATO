@@ -1,0 +1,677 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{0FD95C7C-583C-4C16-8EDA-A185345A1821}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>WindowsApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>VillGrow</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ActivityImages\Blue hills.jpg" />
+    <Content Include="ActivityImages\callcenter.bmp" />
+    <Content Include="ActivityImages\Sunset.jpg" />
+    <Content Include="ActivityImages\Water lilies.jpg" />
+    <Content Include="ActivityImages\Winter.jpg" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Admin\frmActivityMaster.aspx" />
+    <Content Include="Admin\frmAdminComposeMails.aspx" />
+    <Content Include="Admin\frmAdminInboxDetails.aspx" />
+    <Content Include="Admin\frmAdminOutbox.aspx" />
+    <Content Include="Admin\frmAdminShowEmailDetailsInbox.aspx" />
+    <Content Include="Admin\FrmAdminShowEmailDetailsOutbox.aspx" />
+    <Content Include="Admin\frmBankMaster.aspx" />
+    <Content Include="Admin\frmCaseStudyMaster.aspx" />
+    <Content Include="Admin\frmChangePassword.aspx" />
+    <Content Include="Admin\frmPaymentTypeMaster.aspx" />
+    <Content Include="Admin\frmShowMembers.aspx" />
+    <Content Include="Admin\frmShowVillageDonations.aspx" />
+    <Content Include="Admin\frmShowVillageDonationsByUsersDetails.aspx" />
+    <Content Include="Admin\frmShowVolunteers.aspx" />
+    <Content Include="Admin\frmVillageDonationMaster.aspx" />
+    <Content Include="Admin\frmVillageMaster.aspx" />
+    <Content Include="Admin\frmVillageVolunteersMasters.aspx" />
+    <Content Include="Admin\frmVolunteersMaster.aspx" />
+    <Content Include="Admin\ReportDonors.aspx" />
+    <Content Include="Admin\ReportsDonorDetails.aspx" />
+    <Content Include="Admin\ReportVolunteerActivities.aspx" />
+    <Content Include="Admin\ReportVolunteerActivityCompletion.aspx" />
+    <Content Include="Admin\ReportVolunteers.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="DocumentFiles\registrationpage1final.GIF" />
+    <Content Include="DocumentFiles\Sunset.jpg" />
+    <Content Include="DocumentFiles\Water lilies.jpg" />
+    <Content Include="DocumentFiles\Winter.jpg" />
+    <Content Include="frmAboutus.aspx" />
+    <Content Include="frmActivities.aspx" />
+    <Content Include="frmActivityQuestionmaster.aspx" />
+    <Content Include="frmContactUs.aspx" />
+    <Content Include="frmMemberDiscussionForumMaster.aspx" />
+    <Content Include="frmMemberRegistration.aspx" />
+    <Content Include="frmShowNewsLetters.aspx" />
+    <Content Include="frmVillages.aspx" />
+    <Content Include="Images\1asp017.gif" />
+    <Content Include="Images\countrysideontogeny.jpg" />
+    <Content Include="Images\L0_N_Wallace_Keld.jpg" />
+    <Content Include="Images\NoImage.jpg" />
+    <Content Include="Images\Process.gif" />
+    <Content Include="Images\topkey2grn.jpg" />
+    <Content Include="Images\topkey2grn123.jpg" />
+    <Content Include="Images\vil.jpg" />
+    <Content Include="Images\vil1.JPG" />
+    <Content Include="Images\village_logo.jpg" />
+    <Content Include="Login.aspx" />
+    <Content Include="Members\Default.aspx" />
+    <Content Include="Members\frmActivityMonitoringDetails.aspx" />
+    <Content Include="Members\frmChangePassword.aspx" />
+    <Content Include="Members\frmComposeMail.aspx" />
+    <Content Include="Members\frmforumAnswers.aspx" />
+    <Content Include="Members\frmForumDiscussionDetails.aspx" />
+    <Content Include="Members\frmInbox.aspx" />
+    <Content Include="Members\frmMemActQuestionRaiseMaster.aspx" />
+    <Content Include="Members\frmMemberChatRoom.aspx" />
+    <Content Include="Members\frmMemberDiscussionforumMaster.aspx" />
+    <Content Include="Members\frmMemberExperienceMaster.aspx" />
+    <Content Include="Members\frmMemDonationDetails.aspx" />
+    <Content Include="Members\frmOutBox.aspx" />
+    <Content Include="Members\frmPaymentTypeDonationDetails.aspx" />
+    <Content Include="Members\frmShowInboxEmailDetails.aspx" />
+    <Content Include="Members\frmShowOutboxEmailDetails.aspx" />
+    <Content Include="Members\frmViewAnswersToQuestionsOnActivity.aspx" />
+    <Content Include="Members\frmVillageDonationDetails.aspx" />
+    <Content Include="Reports\frmreportsActivitiesMaster.aspx" />
+    <Content Include="Reports\frmReportsVillageDonationMaster.aspx" />
+    <Content Include="Reports\frmreportsVillageMaster.aspx" />
+    <Content Include="SignOut.aspx" />
+    <Content Include="TheChatScreenWin.aspx" />
+    <Content Include="UnormalPagesUserControls\UCActivityMonitoeingDetails.ascx" />
+    <Content Include="UnormalPagesUserControls\UCActivityVideofile.ascx" />
+    <Content Include="UnormalPagesUserControls\UCDocument.ascx" />
+    <Content Include="UnormalPagesUserControls\UCFileUpload.ascx" />
+    <Content Include="UnormalPagesUserControls\UCMailAttachFiles.ascx" />
+    <Content Include="Upload\batchelor.bmp" />
+    <Content Include="Upload\Blue hills.jpg" />
+    <Content Include="Upload\Copy of Water lilies.jpg" />
+    <Content Include="Upload\ImageFromDbToGrid.GIF" />
+    <Content Include="Upload\L0_N_Wallace_Keldnew.jpg" />
+    <Content Include="Upload\m9.jpg" />
+    <Content Include="Upload\nav-logo.gif" />
+    <Content Include="Upload\NoImage.jpg" />
+    <Content Include="Upload\s1.jpg" />
+    <Content Include="Upload\signupbox3.jpg" />
+    <Content Include="Upload\signupbox_bg2.jpg" />
+    <Content Include="Upload\students.jpg" />
+    <Content Include="Upload\Sunset.jpg" />
+    <Content Include="Upload\Water lilies.jpg" />
+    <Content Include="Upload\white-middle.gif" />
+    <Content Include="Upload\Winter.jpg" />
+    <Content Include="UserControls\BrowseFile.ascx" />
+    <Content Include="UserControls\BrowseIcon.ascx" />
+    <Content Include="UserControls\BrowseImage.ascx" />
+    <Content Include="UserControls\images\Add Address.jpg" />
+    <Content Include="UserControls\images\Add Phone No.jpg" />
+    <Content Include="UserControls\images\bottom-left.jpg" />
+    <Content Include="UserControls\images\bottom-middle.jpg" />
+    <Content Include="UserControls\images\bottom-right.jpg" />
+    <Content Include="UserControls\images\break.jpg" />
+    <Content Include="UserControls\images\btn_Close.jpg" />
+    <Content Include="UserControls\images\btn_Continu.jpg" />
+    <Content Include="UserControls\images\btn_submit.jpg" />
+    <Content Include="UserControls\images\defaulticon.gif" />
+    <Content Include="UserControls\images\ist2_6690119-calendar.jpg" />
+    <Content Include="UserControls\images\keyboard.JPG" />
+    <Content Include="UserControls\images\left-middle.jpg" />
+    <Content Include="UserControls\images\linkbg.gif" />
+    <Content Include="UserControls\images\mini-break.jpg" />
+    <Content Include="UserControls\images\NoImage.jpg" />
+    <Content Include="UserControls\images\Regiter Me.jpg" />
+    <Content Include="UserControls\images\right-middle.jpg" />
+    <Content Include="UserControls\images\top-left.jpg" />
+    <Content Include="UserControls\images\top-middle.jpg" />
+    <Content Include="UserControls\images\top-right.jpg" />
+    <Content Include="UserControls\images\Water lilies.jpg" />
+    <Content Include="UserControls\images\Winter.jpg" />
+    <Content Include="UserControls\RegistrationCotrol.ascx" />
+    <Content Include="UserControls\TextValidation.js" />
+    <Content Include="UserControls\UcChangePassword.ascx" />
+    <Content Include="UserControls\Ucfooter.ascx" />
+    <Content Include="UserControls\UCLoginChecking.ascx" />
+    <Content Include="UserControls\ucUserSearchByCity.ascx" />
+    <Content Include="UserControls\ucUserSearchByDOR.ascx" />
+    <Content Include="UserControls\ucUserSearchByLoginId.ascx" />
+    <Content Include="UserControls\ucUserSearchByName.ascx" />
+    <Content Include="UserControls\UpdateContactDetailsUserControl.ascx" />
+    <Content Include="UserControls\UpdatePersonalDetailsUserControl.ascx" />
+    <Content Include="VideoFiles\Blue hills.jpg" />
+    <Content Include="VideoFiles\Sunset.jpg" />
+    <Content Include="Volunteers\Default.aspx" />
+    <Content Include="Volunteers\frmActivityMonitoeingDetails.aspx" />
+    <Content Include="Volunteers\frmActivityMonitoringMaster.aspx" />
+    <Content Include="Volunteers\frmActivityQuestionAnswerMaster.aspx" />
+    <Content Include="Volunteers\frmActivityStatus.aspx" />
+    <Content Include="Volunteers\frmChangePwd.aspx" />
+    <Content Include="Volunteers\frmforumAnswers.aspx" />
+    <Content Include="Volunteers\frmForumDiscussionDetails.aspx" />
+    <Content Include="Volunteers\frmMemberDiscussionforumMaster.aspx" />
+    <Content Include="Volunteers\frmNewsLetterMaster.aspx" />
+    <Content Include="Volunteers\frmVolenteerInbox.aspx" />
+    <Content Include="Volunteers\frmVolunteerActivities.aspx" />
+    <Content Include="Volunteers\frmVolunteerChatRoom.aspx" />
+    <Content Include="Volunteers\frmVolunteerComposeMails.aspx" />
+    <Content Include="Volunteers\frmVolunteerOutbox.aspx" />
+    <Content Include="Volunteers\frmVolunteerShowInboxDetails.aspx" />
+    <Content Include="Volunteers\frmVolunteerShowOutboxDetails.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AdminMasterPage.master.cs">
+      <DependentUpon>AdminMasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\frmActivityMaster.aspx.cs">
+      <DependentUpon>frmActivityMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\frmAdminComposeMails.aspx.cs">
+      <DependentUpon>frmAdminComposeMails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\frmAdminInboxDetails.aspx.cs">
+      <DependentUpon>frmAdminInboxDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\frmAdminOutbox.aspx.cs">
+      <DependentUpon>frmAdminOutbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\frmAdminShowEmailDetailsInbox.aspx.cs">
+      <DependentUpon>frmAdminShowEmailDetailsInbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmAdminShowEmailDetailsOutbox.aspx.cs">
+      <DependentUpon>FrmAdminShowEmailDetailsOutbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\frmBankMaster.aspx.cs">
+      <DependentUpon>frmBankMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\frmCaseStudyMaster.aspx.cs">
+      <DependentUpon>frmCaseStudyMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\frmChangePassword.aspx.cs">
+      <DependentUpon>frmChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\frmPaymentTypeMaster.aspx.cs">
+      <DependentUpon>frmPaymentTypeMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\frmShowMembers.aspx.cs">
+      <DependentUpon>frmShowMembers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\frmShowVillageDonations.aspx.cs">
+      <DependentUpon>frmShowVillageDonations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\frmShowVillageDonationsByUsersDetails.aspx.cs">
+      <DependentUpon>frmShowVillageDonationsByUsersDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\frmShowVolunteers.aspx.cs">
+      <DependentUpon>frmShowVolunteers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\frmVillageDonationMaster.aspx.cs">
+      <DependentUpon>frmVillageDonationMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\frmVillageMaster.aspx.cs">
+      <DependentUpon>frmVillageMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\frmVillageVolunteersMasters.aspx.cs">
+      <DependentUpon>frmVillageVolunteersMasters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\frmVolunteersMaster.aspx.cs">
+      <DependentUpon>frmVolunteersMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ReportDonors.aspx.cs">
+      <DependentUpon>ReportDonors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ReportsDonorDetails.aspx.cs">
+      <DependentUpon>ReportsDonorDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ReportVolunteerActivities.aspx.cs">
+      <DependentUpon>ReportVolunteerActivities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ReportVolunteerActivityCompletion.aspx.cs">
+      <DependentUpon>ReportVolunteerActivityCompletion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ReportVolunteers.aspx.cs">
+      <DependentUpon>ReportVolunteers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Bal\Class_Members.cs" />
+    <Compile Include="App_Code\Bal\clsLogin.cs" />
+    <Compile Include="App_Code\Bal\clsMails.cs" />
+    <Compile Include="App_Code\Bal\clsMemberExp.cs" />
+    <Compile Include="App_Code\Bal\clsMemberQuestions.cs" />
+    <Compile Include="App_Code\Bal\Cls_ActivitiesMaster.cs" />
+    <Compile Include="App_Code\Bal\Cls_ActivityMonitorDetails.cs" />
+    <Compile Include="App_Code\Bal\Cls_ActivityMonitoringMaster.cs" />
+    <Compile Include="App_Code\Bal\Cls_ActivityQuestionMaster.cs" />
+    <Compile Include="App_Code\Bal\Cls_EmailMaster.cs" />
+    <Compile Include="App_Code\Bal\Cls_ExamQuestionsMaster.cs" />
+    <Compile Include="App_Code\Bal\Cls_MemberDiscussionForumMaster.cs" />
+    <Compile Include="App_Code\Bal\Cls_MemberQuestionAnswers.cs" />
+    <Compile Include="App_Code\Bal\Cls_NewsLetterMaster.cs" />
+    <Compile Include="App_Code\Bal\Cls_PaymentTypeDonationDetails.cs" />
+    <Compile Include="App_Code\Bal\Cls_VillageDonationDetails.cs" />
+    <Compile Include="App_Code\Bal\Cls_VillageDonationMaster.cs" />
+    <Compile Include="App_Code\Bal\Cls_VillageMaster.cs" />
+    <Compile Include="App_Code\Bal\Cls_VillageVolunteerMaster.cs" />
+    <Compile Include="App_Code\Bal\Cls_VolunteerActivities.cs" />
+    <Compile Include="App_Code\Bal\Cls_VolunteerMaster.cs" />
+    <Compile Include="App_Code\Bal\Connection.cs" />
+    <Compile Include="App_Code\Chat.cs" />
+    <Compile Include="App_Code\Dal\SQLHelper.cs" />
+    <Compile Include="App_Code\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\Global.asax.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAboutus.aspx.cs">
+      <DependentUpon>frmAboutus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmActivities.aspx.cs">
+      <DependentUpon>frmActivities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmActivityQuestionmaster.aspx.cs">
+      <DependentUpon>frmActivityQuestionmaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmContactUs.aspx.cs">
+      <DependentUpon>frmContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmMemberDiscussionForumMaster.aspx.cs">
+      <DependentUpon>frmMemberDiscussionForumMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmMemberRegistration.aspx.cs">
+      <DependentUpon>frmMemberRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmShowNewsLetters.aspx.cs">
+      <DependentUpon>frmShowNewsLetters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmVillages.aspx.cs">
+      <DependentUpon>frmVillages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainMasterPage.master.cs">
+      <DependentUpon>MainMasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\frmActivityMonitoringDetails.aspx.cs">
+      <DependentUpon>frmActivityMonitoringDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\frmChangePassword.aspx.cs">
+      <DependentUpon>frmChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\frmComposeMail.aspx.cs">
+      <DependentUpon>frmComposeMail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\frmforumAnswers.aspx.cs">
+      <DependentUpon>frmforumAnswers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\frmForumDiscussionDetails.aspx.cs">
+      <DependentUpon>frmForumDiscussionDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\frmInbox.aspx.cs">
+      <DependentUpon>frmInbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\frmMemActQuestionRaiseMaster.aspx.cs">
+      <DependentUpon>frmMemActQuestionRaiseMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\frmMemberChatRoom.aspx.cs">
+      <DependentUpon>frmMemberChatRoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\frmMemberDiscussionforumMaster.aspx.cs">
+      <DependentUpon>frmMemberDiscussionforumMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\frmMemberExperienceMaster.aspx.cs">
+      <DependentUpon>frmMemberExperienceMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\frmMemDonationDetails.aspx.cs">
+      <DependentUpon>frmMemDonationDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\frmOutBox.aspx.cs">
+      <DependentUpon>frmOutBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\frmPaymentTypeDonationDetails.aspx.cs">
+      <DependentUpon>frmPaymentTypeDonationDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\frmShowInboxEmailDetails.aspx.cs">
+      <DependentUpon>frmShowInboxEmailDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\frmShowOutboxEmailDetails.aspx.cs">
+      <DependentUpon>frmShowOutboxEmailDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\frmViewAnswersToQuestionsOnActivity.aspx.cs">
+      <DependentUpon>frmViewAnswersToQuestionsOnActivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\frmVillageDonationDetails.aspx.cs">
+      <DependentUpon>frmVillageDonationDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Members\MembersMasterPage.master.cs">
+      <DependentUpon>MembersMasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\frmreportsActivitiesMaster.aspx.cs">
+      <DependentUpon>frmreportsActivitiesMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\frmReportsVillageDonationMaster.aspx.cs">
+      <DependentUpon>frmReportsVillageDonationMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\frmreportsVillageMaster.aspx.cs">
+      <DependentUpon>frmreportsVillageMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportsMasterPage.master.cs">
+      <DependentUpon>ReportsMasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignOut.aspx.cs">
+      <DependentUpon>SignOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TheChatScreenWin.aspx.cs">
+      <DependentUpon>TheChatScreenWin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UnormalPagesUserControls\UCActivityMonitoeingDetails.ascx.cs">
+      <DependentUpon>UCActivityMonitoeingDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UnormalPagesUserControls\UCActivityVideofile.ascx.cs">
+      <DependentUpon>UCActivityVideofile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UnormalPagesUserControls\UCDocument.ascx.cs">
+      <DependentUpon>UCDocument.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UnormalPagesUserControls\UCFileUpload.ascx.cs">
+      <DependentUpon>UCFileUpload.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UnormalPagesUserControls\UCMailAttachFiles.ascx.cs">
+      <DependentUpon>UCMailAttachFiles.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\BrowseFile.ascx.cs">
+      <DependentUpon>BrowseFile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\BrowseIcon.ascx.cs">
+      <DependentUpon>BrowseIcon.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\BrowseImage.ascx.cs">
+      <DependentUpon>BrowseImage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\RegistrationCotrol.ascx.cs">
+      <DependentUpon>RegistrationCotrol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcChangePassword.ascx.cs">
+      <DependentUpon>UcChangePassword.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Ucfooter.ascx.cs">
+      <DependentUpon>Ucfooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCLoginChecking.ascx.cs">
+      <DependentUpon>UCLoginChecking.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucUserSearchByCity.ascx.cs">
+      <DependentUpon>ucUserSearchByCity.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucUserSearchByDOR.ascx.cs">
+      <DependentUpon>ucUserSearchByDOR.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucUserSearchByLoginId.ascx.cs">
+      <DependentUpon>ucUserSearchByLoginId.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\ucUserSearchByName.ascx.cs">
+      <DependentUpon>ucUserSearchByName.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UpdateContactDetailsUserControl.ascx.cs">
+      <DependentUpon>UpdateContactDetailsUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UpdatePersonalDetailsUserControl.ascx.cs">
+      <DependentUpon>UpdatePersonalDetailsUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volunteers\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volunteers\frmActivityMonitoeingDetails.aspx.cs">
+      <DependentUpon>frmActivityMonitoeingDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volunteers\frmActivityMonitoringMaster.aspx.cs">
+      <DependentUpon>frmActivityMonitoringMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volunteers\frmActivityQuestionAnswerMaster.aspx.cs">
+      <DependentUpon>frmActivityQuestionAnswerMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volunteers\frmActivityStatus.aspx.cs">
+      <DependentUpon>frmActivityStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volunteers\frmChangePwd.aspx.cs">
+      <DependentUpon>frmChangePwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volunteers\frmforumAnswers.aspx.cs">
+      <DependentUpon>frmforumAnswers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volunteers\frmForumDiscussionDetails.aspx.cs">
+      <DependentUpon>frmForumDiscussionDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volunteers\frmMemberDiscussionforumMaster.aspx.cs">
+      <DependentUpon>frmMemberDiscussionforumMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volunteers\frmNewsLetterMaster.aspx.cs">
+      <DependentUpon>frmNewsLetterMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volunteers\frmVolenteerInbox.aspx.cs">
+      <DependentUpon>frmVolenteerInbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volunteers\frmVolunteerActivities.aspx.cs">
+      <DependentUpon>frmVolunteerActivities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volunteers\frmVolunteerChatRoom.aspx.cs">
+      <DependentUpon>frmVolunteerChatRoom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volunteers\frmVolunteerComposeMails.aspx.cs">
+      <DependentUpon>frmVolunteerComposeMails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volunteers\frmVolunteerOutbox.aspx.cs">
+      <DependentUpon>frmVolunteerOutbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volunteers\frmVolunteerShowInboxDetails.aspx.cs">
+      <DependentUpon>frmVolunteerShowInboxDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volunteers\frmVolunteerShowOutboxDetails.aspx.cs">
+      <DependentUpon>frmVolunteerShowOutboxDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Volunteers\VolunteerMasterPage.master.cs">
+      <DependentUpon>VolunteerMasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".vs\Code\config\applicationhost.config" />
+    <None Include=".vs\Code\v16\.suo" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="Admin\AdminMasterPage.master" />
+    <None Include="Admin\frmActivityMonitoeingDetails.aspx.cs.exclude" />
+    <None Include="Admin\frmActivityMonitoeingDetails.aspx.exclude" />
+    <None Include="Admin\frmActivityMonitoringMaster.aspx.cs.exclude" />
+    <None Include="Admin\frmActivityMonitoringMaster.aspx.exclude" />
+    <None Include="Admin\frmActivityQuestionAnswerMaster.aspx.cs.exclude" />
+    <None Include="Admin\frmActivityQuestionAnswerMaster.aspx.exclude" />
+    <None Include="Admin\frmActivityQuestionmaster.aspx.cs.exclude" />
+    <None Include="Admin\frmActivityQuestionmaster.aspx.exclude" />
+    <None Include="Admin\frmAddMember.aspx.cs.exclude" />
+    <None Include="Admin\frmAddMember.aspx.exclude" />
+    <None Include="Admin\frmMemActQuestionRaiseMaster.aspx.cs.exclude" />
+    <None Include="Admin\frmMemActQuestionRaiseMaster.aspx.exclude" />
+    <None Include="Admin\frmMemberExperienceMaster.aspx.cs.exclude" />
+    <None Include="Admin\frmMemberExperienceMaster.aspx.exclude" />
+    <None Include="Admin\frmNewsLetterMaster.aspx.cs.exclude" />
+    <None Include="Admin\frmNewsLetterMaster.aspx.exclude" />
+    <None Include="Admin\frmPaymentTypeDonationDetails.aspx.cs.exclude" />
+    <None Include="Admin\frmPaymentTypeDonationDetails.aspx.exclude" />
+    <None Include="Admin\frmVolunteerActivities.aspx.cs.exclude" />
+    <None Include="Admin\frmVolunteerActivities.aspx.exclude" />
+    <None Include="app.config" />
+    <None Include="App_Code\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="App_Code\DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Code\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DocumentFiles\Dot NET Projects List.doc" />
+    <None Include="DocumentFiles\Resume.doc" />
+    <None Include="MainMasterPage.master" />
+    <None Include="Members\MembersMasterPage.master" />
+    <None Include="Reports\ReportsMasterPage.master" />
+    <None Include="UserControls\images\Thumbs.db" />
+    <None Include="Volunteers\VolunteerMasterPage.master" />
+    <None Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="MailAttachFiles\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
